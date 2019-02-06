@@ -1,8 +1,20 @@
 <html>
     <head>
-
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     </head>
     <body>
+        <!-- loading in assets to be cached-->
+        <img crossorigin="anonymous" id="skymapPR" src="assets/Textures/sky-PeaceRoom.png">
+
+        <!--lights-->
+        <a-entity light="type:directional; castShadow:true; intensity:0.6; shadowBias:-0.000001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.5 1 1"></a-entity>
+        <a-entity light="type: ambient; intensity: 1.0; color:#bbb;"></a-entity>
+
+        <!-- loading in the sky-->
+
+        <a-entity id="peaceRoomSky" 
+            geometry = "primitive sphere; radius: 500;"
+            material="shader:flat src:#skymapPR; side:back;height: 2048; width: 2048"></a-entity>
         
     </body>
 </html>
