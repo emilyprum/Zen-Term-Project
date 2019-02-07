@@ -9,8 +9,10 @@
         <a-scene shadow="type:basic;" id="PeaceRoom">
                 <a-assets timeout="3000">
                     <!-- loading in assets to be cached-->
-                    <img crossorigin="anonymous" id="skymapPR" src="assets/Textures/sky-PeaceRoom.png">
-                    <a-asset-item id="treePlaceHolder" scr="assets/placeHolders/tree_placeholder.obj"></a-asset-item>
+
+                    <img id="treeMat" src="/assets/Textures/treetxt.jpg">
+                    <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/sky-PeaceRoom.png">
+                    <a-asset-item id="treePlaceHolder" src="/assets/placeHolders/tree_placeholder.obj"></a-asset-item>
                 </a-assets>
 
                 <!--camera stuff-->
@@ -22,10 +24,10 @@
 
                     <!--stuff loading shit-->
 
-                    <a-entity obj-model="obj:#treePlaceHolder;" position="2 0 -4" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="tree" obj-model="obj:#treePlaceHolder;" position="0 0 0" scale="1.0 1.0 1.0" material="color:#fff; src:#treeMat; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     
                     <a-entity id="plane" geometry="primitive:plane; width:4; height:4;" position="0 0 -4" rotation="-90 0 0" 
-                    shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymap; roughness:0.5; metalness:0.0;"></a-entity>
+                    shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.0;"></a-entity>
             
                     <!-- loading in the sky-->
 
