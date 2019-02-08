@@ -8,26 +8,39 @@
 
         <a-scene shadow="type:basic;" id="PeaceRoom">
                 <a-assets timeout="3000">
-                    <!-- loading in assets to be cached-->
-
+                    <!-- loading in assets to be cached-->  
+                    <!--textures -->
                     <img id="treeMat" src="/assets/Textures/treetxt.jpg">
+                    <img id="houseMat" src="/assets/Textures/housetxt.jpg">
+                    <img id="planeMat" src="/assets/Textures/outUv.png">
                     <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/sky-PeaceRoom.png">
+
+                    <!--assets-->
                     <a-asset-item id="treePlaceHolder" src="/assets/placeHolders/tree_placeholder.obj"></a-asset-item>
+                    <a-asset-item id="housePlaceHolder" src="/assets/placeHolders/house_placeholder.obj"></a-asset-item>
+                    <a-asset-item id="planePlaceHolder" src="/assets/placeHolders/plane_placeholder.obj"></a-asset-item>
+                    
+
                 </a-assets>
 
                 <!--camera stuff-->
-                <a-entity position="0 2 0 " camera look-controls wasd-controls></a-entity>
+                <a-entity position="0 2 3 " camera look-controls wasd-controls></a-entity>
 
                     <!--lights-->
                     <a-entity light="type:directional; castShadow:true; intensity:0.6; shadowBias:-0.000001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.5 1 1"></a-entity>
                     <a-entity light="type:ambient; intensity:1.0; color:#bbb;"></a-entity>
 
-                    <!--stuff loading shit-->
+                    <!--stuff loading-->
 
-                    <a-entity id="tree" obj-model="obj:#treePlaceHolder;" position="0 0 0" scale="1.0 1.0 1.0" material="color:#fff; src:#treeMat; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                    
-                    <a-entity id="plane" geometry="primitive:plane; width:4; height:4;" position="0 0 -4" rotation="-90 0 0" 
-                    shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.0;"></a-entity>
+                    <a-entity id="tree" obj-model="obj:#treePlaceHolder;" position="18 0 15" scale="1.0 1.0 1.0" material="color:#fff; src:#treeMat; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="tree2" obj-model="obj:#treePlaceHolder;" position="15 0 13" scale="1.0 1.0 1.0" material="color:#fff; src:#treeMat; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="house" obj-model="obj:#housePlaceHolder;" position="0 0 -15" scale="1.0 1.0 1.0" material="color:#fff; src:#houseMat; sphericalEnvMap:#skymapPR; roughness:1.0; metalness:0.0;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="plane" obj-model="obj:#planePlaceHolder;" position="0 0 -4" scale="1.0 1.0 1.0" material="color:#fff; src:#planeMat; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+
+
+
+                    <!--<a-entity id="plane" geometry="primitive:plane; width:50; height:40;" position="0 0 -4" rotation="-90 0 0" 
+                    shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.0;"></a-entity> -->
             
                     <!-- loading in the sky-->
 
