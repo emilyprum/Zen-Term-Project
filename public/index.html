@@ -16,12 +16,20 @@
 
                     <!--assets-->
                     <a-asset-item id="bushTreePR" src="/assets/PeaceRoom Models/bushTrees.obj"></a-asset-item>
+                    <a-asset-item id="tree2" src="/assets/PeaceRoom Models/tree_pr2.obj"></a-asset-item>
+                    <a-asset-item id="tree3" src="/assets/PeaceRoom Models/tree1.obj"></a-asset-item>
                     <a-asset-item id="treeM" src="/assets/PeaceRoom Models/tree_main.obj"></a-asset-item>
                     <a-asset-item id="entGatePR" src="/assets/PeaceRoom Models/entranceGate.obj"></a-asset-item>
                     <a-asset-item id="pond" src="/assets/PeaceRoom Models/gardenRiver.obj"></a-asset-item>
                     <a-asset-item id="templePR" src="/assets/PeaceRoom Models/Temple.obj"></a-asset-item>
                     <a-asset-item id="LRocksPR" src="/assets/PeaceRoom Models/largeRocks.obj"></a-asset-item>
                     <a-asset-item id="planePlaceHolder" src="/assets/PeaceRoom Models/plane.obj"></a-asset-item>
+                    <a-asset-item id="treeFence" src="/assets/PeaceRoom Models/TreeFence.glb"></a-asset-item>
+                    <a-asset-item id="bridge" src="/assets/PeaceRoom Models/bridge.obj"></a-asset-item>
+                    <a-asset-item id="rockPath1" src="/assets/PeaceRoom Models/rockpath1.obj"></a-asset-item>
+                    <a-asset-item id="flatRock" src="/assets/PeaceRoom Models/flatRock.obj"></a-asset-item>
+                    <a-asset-item id="decor" src="/assets/PeaceRoom Models/decor.obj"></a-asset-item>
+
 
 
                     
@@ -37,16 +45,33 @@
 
                     <!--stuff loading-->
 
+                    <!--Trees-->
+                    
+                    <a-gltf-model src="#treeFence" position="25 0 5" scale="0.6 0.6 0.6" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-gltf-model>
+
+
                     <a-entity id="bushTree" obj-model="obj:#bushTreePR;" position="-24 0 2" rotation = "0 -80 0" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                    <a-entity id="LRocks" obj-model="obj:#LRocksPR;" position="-21.972 0 -2.387" rotation = "0 -63.318 0" scale="2.5 2.5 2.5" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.2; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="bushTree2" obj-model="obj:#bushTreePR;" position="-4 0 8" rotation = "0 -34 0" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+
+                    <a-entity id="tree3" obj-model="obj:#tree3;" position="20 0 -14" rotation = "0 92 0" scale="1.5 1.5 1.5" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="tree2" obj-model="obj:#tree2;" position="-25 0 -12" rotation = "0 -113 0" scale="1.1 1.1 1.1" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="treeM" obj-model="obj:#treeM;" position="25 0 5" rotation = "0 -10 0" scale="0.04 0.04 0.04" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <!--rock-->
+
+                    <a-entity id="LRocks" obj-model="obj:#LRocksPR;" position="-21.972 0 -2.387" rotation = "0 -63.318 0" scale="2.5 2.5 2.5" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.2; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="LRocks2" obj-model="obj:#LRocksPR;" position="20 0 12" rotation = "0 110 0" scale="3 3 3" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="LRocks3" obj-model="obj:#LRocksPR;" position="24 0 -14" rotation = "0 105 0" scale="3.5 3.5 3.5" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="flatRock" obj-model="obj:#flatRock;" position="-14 0 -7" rotation = "0 139 0" scale="2.5 2 1.8" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <!--accessory-->
+
+                    
                     <a-entity id="gate" obj-model="obj:#entGatePR;" position="-16 0 -12" rotation = "0 65 0" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="plane" obj-model="obj:#planePlaceHolder;" position="0 0 -4" scale="1.0 1.0 1.0" material="color:#fff; src:#planeMat; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="temple" obj-model="obj:#templePR;" position="0 0 -25" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="pond" obj-model="obj:#pond;" position="-0.220 -0.500 4" rotation = "0 -22 -0.5" scale="1.516 1.0 1.691" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-
-
+                    <a-entity id="bridge" obj-model="obj:#bridge;" position="5 -0.500 5.5" rotation = "0 8 0" scale="1.5 2 2.9" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="rockPath1" obj-model="obj:#rockPath1;" position="-13 -0.22 -12.5" rotation = "0 -129 0" scale="1.9 1 2.9" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="decor" obj-model="obj:#decor;" position="-14 0 -7.5" rotation = "0 139 0" scale="1 1 1" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     <!--<a-entity id="plane" geometry="primitive:plane; width:50; height:40;" position="0 0 -4" rotation="-90 0 0" 
                     shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.0;"></a-entity> -->
