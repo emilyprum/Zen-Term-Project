@@ -12,13 +12,15 @@
                     <!-- loading in assets to be cached-->  
                     <!--textures -->
                 
-                    <img id="planeMat" src="/assets/Textures/planetxt.png">
-                    <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/peaceroomSky.jpg">
-                    <img id = "templeTXT" src="/assets/Textures/templeTxt2.png">
+                   
+                    <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/PeaceRoom/peaceroomSky.jpg">
+                    <img id = "templeTXT" src="/assets/Textures/PeaceRoom/templeTxt2.png">
+                    <img id = "cTreeTXT" src="/assets/Textures/PeaceRoom/ctree_pr2.png">
+                    <img id = "bushTreesTXT" src="/assets/Textures/PeaceRoom/bushtrees_color.png">
 
                     <!--assets-->
                     <a-asset-item id="bushTreePR" src="/assets/PeaceRoom Models/bushTrees.obj"></a-asset-item>
-                    <a-asset-item id="tree2" src="/assets/PeaceRoom Models/tree_pr2.obj"></a-asset-item>
+                    <a-asset-item id="tree2" src="/assets/PeaceRoom Models/ctree_pr2.obj"></a-asset-item>
                     <a-asset-item id="tree3" src="/assets/PeaceRoom Models/tree1.obj"></a-asset-item>
                     <a-asset-item id="treeM" src="/assets/PeaceRoom Models/tree_main.obj"></a-asset-item>
                     <a-asset-item id="entGatePR" src="/assets/PeaceRoom Models/entranceGate.obj"></a-asset-item>
@@ -41,7 +43,7 @@
 
 
                     
-
+w
                 </a-assets>
 
                 <!--camera stuff-->
@@ -58,11 +60,11 @@
                     <a-gltf-model src="#treeFence" position="25 0 5" scale="0.6 0.6 0.6" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-gltf-model>
 
 
-                    <a-entity id="bushTree" obj-model="obj:#bushTreePR;" position="-24 0 2" rotation = "0 -80 0" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                    <a-entity id="bushTree2" obj-model="obj:#bushTreePR;" position="-4 -0.2 8" rotation = "0 -34 0" scale="1.0 1.0 1.0" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="bushTree" obj-model="obj:#bushTreePR;" position="-24 0 2" rotation = "0 -80 0" scale="1.0 1.0 1.0" material="color:#fff; src: #bushTreesTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="bushTree2" obj-model="obj:#bushTreePR;" position="-4 -0.2 8" rotation = "0 -34 0" scale="1.0 1.0 1.0" material="color:#fff; src: #bushTreesTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     <a-entity id="tree3" obj-model="obj:#tree3;" position="20 0 -14" rotation = "0 92 0" scale="1.5 1.5 1.5" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                    <a-entity id="tree2" obj-model="obj:#tree2;" position="-25 0 -12" rotation = "0 -113 0" scale="1.1 1.1 1.1" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="tree2" obj-model="obj:#tree2;" position="-25 0 -12" rotation = "0 -113 0" scale="1.1 1.1 1.1" material="color:#fff; src:#cTreeTXT; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="treeM" obj-model="obj:#treeM;" position="25 0 5" rotation = "0 -10 0" scale="0.04 0.04 0.04" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="bonsi" obj-model="obj:#bonsi;" position="-1 -0.3 -5.5" rotation = "0 0 0" scale="2.3 2.3 2.3" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <!--rock-->
