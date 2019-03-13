@@ -1,0 +1,33 @@
+<html>
+    <head>
+   
+        <script src="/js/aframe.min.js"></script>
+        <script src="/js/spherical-env-map.js"></script>
+        <script src="/js/aframe-extras.js"></script>
+        <script src="/js/aframe-extras.min.js"></script>
+        <script src= "/js/a-ocean.js"></script>
+        <script src= "/js/orb.js"></script>
+
+
+
+    </head>
+    <body>
+
+        <a-scene shadow="type:basic;" id="PeaceRoom">
+                <a-assets timeout="3000">
+                    <!-- loading in assets to be cached-->  
+                    <!--textures -->
+                
+                   
+                    <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/PeaceRoom/peaceroomSky.jpg">
+                   
+
+                    <a-entity id="sky" 
+                        geometry = "primitive:sphere; radius: 500;"
+                        material="shader:flat; src:#skymapPR; side:back; height:2048; width:2048" ></a-entity>
+                
+        </a-scene>
+      
+        
+    </body>
+</html>
