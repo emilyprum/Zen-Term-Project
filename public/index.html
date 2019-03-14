@@ -62,7 +62,16 @@
                 </a-assets>
 
                 <!--camera stuff-->
-                <a-entity position="0 3 3 " camera look-controls wasd-controls></a-entity>
+                <a-entity position="0 3 3 " camera look-controls wasd-controls>
+                     <a-entity  
+                     cursor="fuse:true; fuseTimeout:500;"
+                     rayOrigin:mouse;
+                     position="0 0 -1"
+                     geometry="primitive:ring; radiusInner:0.02; radiusOuter:0.03;"
+                     material="shader:flat; color:black;" >
+                    </a-entity>
+
+                </a-entity>
 
                     <!--lights-->
                     <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
@@ -92,7 +101,7 @@
                     <a-entity id="flatRock1" obj-model="obj:#flatRock;" position="-1 -0.3 -5.5" rotation = "180 0 0" scale="3.2 2.1 2.7" material="color:#C1C7C0; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     <!--accessory-->
-                    <a-entity switch-environment id="orb" obj-model="obj:#orb;" cursor="fuse:true; fuseTimeout:500;" position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity switch-environment id="orb" obj-model="obj:#orb;"  position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     
                     <a-entity id="gate" obj-model="obj:#entGatePR;" position="-16 0 -12" rotation = "0 65 0" scale="1.0 1.0 1.0" material="color:#CA9B54; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>

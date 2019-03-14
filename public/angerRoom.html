@@ -6,7 +6,8 @@
         <script src="/js/aframe-extras.js"></script>
         <script src="/js/aframe-extras.min.js"></script>
         <script src= "/js/a-ocean.js"></script>
-        <script src= "/js/orb.js"></script>
+        <script src= "/js/switch-environment.js"></script>
+        
 
 
 
@@ -16,15 +17,51 @@
         <a-scene shadow="type:basic;" id="PeaceRoom">
                 <a-assets timeout="3000">
                     <!-- loading in assets to be cached-->  
+                    <img crossorigin="anonymous" id="skymapAR" src="/assets/Textures/PeaceRoom/peaceroomSky.jpg">
+
+
+
+
                     <!--textures -->
                 
+          
+                    <a-asset-item id="orb" src="/assets/placeHolders/orb.obj"></a-asset-item>
+
+
+                </a-assets>
+
+                <!--camera stuff-->
+                <a-entity position="0 3 3 " camera look-controls wasd-controls></a-entity>
+
+                    <!--lights-->
+                    <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
+                    <a-entity light="type:ambient; intensity:0.7; color:#F5D0A0;"></a-entity>
+
+                    <!--stuff loading-->
+
+                    <!--Trees-->
+                    
                    
-                    <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/PeaceRoom/peaceroomSky.jpg">
+                    <!--accessory-->
+                    <a-entity switch-environment id="orb" obj-model="obj:#orb;" cursor="fuse:true; fuseTimeout:500;" position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+
+                    
                    
+                    <a-ocean 
+                        id="gardenPond"
+                  
+                        position="-1.955 -1.1 6.567"
+                        rotation="-90.000 72.778"
+                        color = "#ade2fa"
+                        width = "10"
+                        density="20" 
+                        depth = "40">
+                    </a-ocean>
+             
 
                     <a-entity id="sky" 
                         geometry = "primitive:sphere; radius: 500;"
-                        material="shader:flat; src:#skymapPR; side:back; height:2048; width:2048" ></a-entity>
+                        material="shader:flat; src:#skymapAR; side:back; height:2048; width:2048" ></a-entity>
                 
         </a-scene>
       

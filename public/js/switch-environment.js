@@ -4,16 +4,17 @@ AFRAME.registerComponent('switch-environment', {
         const Context_AF = this;
 
 
-        Context_AF.el.addEventListener('click', function(event) {
-            console.log("click");
-           
+        Context_AF.el.addEventListener('mousedown', function(event) {
+            console.log("mousedown");
             Context_AF.switchEnv();
+
 
         });
     },
     switchEnv : function() {
         const Context_AF = this;
-        location.replace("angerRoom.html"); 
+        location.assign("angerRoom.html"); 
         
+        let scene = document.querySelector('a-scene');
     }
 });
