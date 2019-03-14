@@ -1,19 +1,19 @@
-    AFRAME.registerComponent('switch-environment', {
+AFRAME.registerComponent('switch-environment', {
     schema: {},
     init : function() {
         const Context_AF = this;
 
 
-        Context_AF.el.addEventListener('mousedown', function(event) {
+        Context_AF.el.addEventListener('click', function(event) {
+            console.log("click");
            
-            console.log("mousedown");
-            Context_AF.changeEnv();
+            Context_AF.switchEnv();
 
         });
     },
-    changeEnv : function() {
+    switchEnv : function() {
         const Context_AF = this;
-        location.replace("angerRoom.html");
+        location.replace("angerRoom.html"); 
         
     }
 });
