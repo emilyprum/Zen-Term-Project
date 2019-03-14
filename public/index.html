@@ -6,7 +6,8 @@
         <script src="/js/aframe-extras.js"></script>
         <script src="/js/aframe-extras.min.js"></script>
         <script src= "/js/a-ocean.js"></script>
-        <script src= "/js/orb.js"></script>
+        <script src= "/js/switch-environment.js"></script>
+        
 
 
 
@@ -55,6 +56,7 @@
                     <a-asset-item id="bushes" src="/assets/PeaceRoom Models/bushes.obj"></a-asset-item>
                     <a-asset-item id="bush" src="/assets/PeaceRoom Models/bush.obj"></a-asset-item>
                     <a-asset-item id="cherryTree" src="/assets/PeaceRoom Models/ctree_pr2.obj"></a-asset-item>
+                    <a-asset-item id="orb" src="/assets/placeHolders/orb.obj"></a-asset-item>
 
 
                 </a-assets>
@@ -90,6 +92,7 @@
                     <a-entity id="flatRock1" obj-model="obj:#flatRock;" position="-1 -0.3 -5.5" rotation = "180 0 0" scale="3.2 2.1 2.7" material="color:#C1C7C0; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     <!--accessory-->
+                    <a-entity switch-environment id="orb" obj-model="obj:#orb;" position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     
                     <a-entity id="gate" obj-model="obj:#entGatePR;" position="-16 0 -12" rotation = "0 65 0" scale="1.0 1.0 1.0" material="color:#CA9B54; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
