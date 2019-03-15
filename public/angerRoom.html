@@ -23,6 +23,9 @@
                     <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/AngerRoom/SkyAR.png">
                     <img id="groundTXT" src="/assets/Textures/AngerRoom/ground.png">
                     <img id="mountainTXT" src="/assets/Textures/AngerRoom/mountains_color_SNOW.png">
+                    <img id="tree1TXT" src="/assets/Textures/AngerRoom/foresttree.png">
+                    <img id="tree2TXT" src="/assets/Textures/AngerRoom/foresttree_1.png">
+
 
 
 
@@ -30,12 +33,14 @@
                     <!--models-->
                     <a-asset-item id="groundAR" src="/assets/AngerRoom Models/ground.obj"></a-asset-item>
                     <a-asset-item id="mountainAR" src="/assets/AngerRoom Models/Mountains.obj"></a-asset-item>
+                    <a-asset-item id="tree1AR" src="/assets/AngerRoom Models/foresttree.obj"></a-asset-item>
+                    <a-asset-item id="tree2AR" src="/assets/AngerRoom Models/foresttree_1.obj"></a-asset-item>
 
 
                 </a-assets>
 
                 <!--camera stuff-->
-                <a-entity position="0 3 3 " camera look-controls wasd-controls>
+                <a-entity position="0 2 3 " camera look-controls wasd-controls>
                      <a-entity  
                      cursor="fuse:true; fuseTimeout:500;"
                      rayOrigin:mouse;
@@ -47,10 +52,20 @@
                 </a-entity>
 
                     <!--lights-->
-                    <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
-                    <a-entity light="type:ambient; intensity:0.7; color:#adbcd3;"></a-entity>
+                <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
+                <a-entity light="type:ambient; intensity:0.7; color:#adbcd3;"></a-entity>
 
                     <!--stuff loading-->
+                    <!--TREESSSS-->
+
+           
+                    <a-entity id="tree1" obj-model="obj:#tree1AR;" rotation="0 -23.9 0" position="14 -8.68 -26.53" scale="1.3 1 1" material="src: #tree1TXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                   
+
+                    <a-entity id="tree2" obj-model="obj:#tree2AR;" rotation="0 90 0" position="-24.977 -9.440 181.084" scale="1 1 1" material="src: #tree2TXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+           
+
+
 
                    
                     <!--accessory-->
