@@ -16,52 +16,68 @@
 
         <a-scene shadow="type:basic;" id="PeaceRoom">
                 <a-assets timeout="3000">
-                    <!-- loading in assets to be cached-->  
-                    <img crossorigin="anonymous" id="skymapAR" src="/assets/Textures/PeaceRoom/peaceroomSky.jpg">
-
-
-
-
+                  
                     <!--textures -->
                 
-          
-                    <a-asset-item id="orb" src="/assets/placeHolders/orb.obj"></a-asset-item>
+                   
+                    <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/AngerRoom/SkyAR.png">
+                    <img id="groundTXT" src="/assets/Textures/AngerRoom/ground.png">
+                    <img id="mountainTXT" src="/assets/Textures/AngerRoom/mountains_color_SNOW.png">
+
+
+
+
+                    <!--models-->
+                    <a-asset-item id="groundAR" src="/assets/AngerRoom Models/ground.obj"></a-asset-item>
+                    <a-asset-item id="mountainAR" src="/assets/AngerRoom Models/Mountains.obj"></a-asset-item>
 
 
                 </a-assets>
 
                 <!--camera stuff-->
-                <a-entity position="0 3 3 " camera look-controls wasd-controls></a-entity>
+                <a-entity position="0 3 3 " camera look-controls wasd-controls>
+                     <a-entity  
+                     cursor="fuse:true; fuseTimeout:500;"
+                     rayOrigin:mouse;
+                     position="0 0 -1"
+                     geometry="primitive:ring; radiusInner:0.02; radiusOuter:0.03;"
+                     material="shader:flat; color:black;" >
+                    </a-entity>
+
+                </a-entity>
 
                     <!--lights-->
                     <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
-                    <a-entity light="type:ambient; intensity:0.7; color:#F5D0A0;"></a-entity>
+                    <a-entity light="type:ambient; intensity:0.7; color:#adbcd3;"></a-entity>
 
                     <!--stuff loading-->
 
-                    <!--Trees-->
-                    
                    
                     <!--accessory-->
-                    <a-entity switch-environment id="orb" obj-model="obj:#orb;" cursor="fuse:true; fuseTimeout:500;" position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity switch-environment id="orb" obj-model="obj:#orb;"  position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+
+
+                    <a-entity id="mountain" obj-model="obj:#mountainAR;" rotation="0 -23.9 0" position="92.31 -17.140 -118" scale="4.3 2.7 2.7" material="src: #mountainTXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
                     
-                   
+                    <a-entity id="plane" obj-model="obj:#groundAR;" position="0 -9.0 0" scale="5.4 3.5 6.6" material="color:#AFE1A8; src:#groundTXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-ocean 
                         id="gardenPond"
-                  
-                        position="-1.955 -1.1 6.567"
-                        rotation="-90.000 72.778"
+                        scale = "18.36 9.25 5.269"
+                        position="52.71 -9.3 -80"
+                        rotation="-90.000 2.845 0"
                         color = "#ade2fa"
                         width = "10"
-                        density="20" 
-                        depth = "40">
+                        density="10" 
+                        depth = "20"
+                        >
                     </a-ocean>
              
+                
 
                     <a-entity id="sky" 
                         geometry = "primitive:sphere; radius: 500;"
-                        material="shader:flat; src:#skymapAR; side:back; height:2048; width:2048" ></a-entity>
+                        material="shader:flat; src:#skymapPR; side:back; height:2048; width:2048" ></a-entity>
                 
         </a-scene>
       
