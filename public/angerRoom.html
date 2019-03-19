@@ -7,7 +7,7 @@
         <script src="/js/aframe-extras.min.js"></script>
         <script src= "/js/a-ocean.js"></script>
         <script src= "/js/switch-environment.js"></script>
-        <script src="https://unpkg.com/aframe-particle-system-component@1.0.5/dist/aframe-particle-system-component.min.js"></script>
+        <script src="/js/aframe-particle-system-component.min.js"></script>
         
 
 
@@ -57,7 +57,7 @@
                 <a-entity light="type:ambient; intensity:0.7; color:#adbcd3;"></a-entity>
 
                     <!--stuff loading-->
-                    <a-entity id="#snow" position="0 2.25 -15" positionSpread = "5000 5000 5000" particle-system="preset: snow" size= "3"></a-entity>
+                    <a-entity id ="snow" position="0 0 0" scale = "20 10 20" particle-system="preset: snow; particleCount: 50000; size:6; velocityValue : 0 1 0; velocitySpread: 1 0.75 1"></a-entity>
                     <!--TREESSSS-->
 
            
