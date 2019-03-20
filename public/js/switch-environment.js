@@ -13,7 +13,7 @@ AFRAME.registerComponent('switch-environment', {
     },
     switchEnv : function() {
         const Context_AF = this;
-        location.assign("angerRoom.html"); 
+        location.assign("index.html"); 
         
         let scene = document.querySelector('a-scene');
     }

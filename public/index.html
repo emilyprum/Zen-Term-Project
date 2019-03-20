@@ -7,6 +7,7 @@
         <script src="/js/aframe-extras.min.js"></script>
         <script src= "/js/a-ocean.js"></script>
         <script src= "/js/switch-environment.js"></script>
+        <script src= "/js/glow.js"></script>
         
 
 
@@ -62,7 +63,7 @@
                 </a-assets>
 
                 <!--camera stuff-->
-                <a-entity position="0 3 3 " camera look-controls wasd-controls>
+                <a-entity position="0 3 -2 "camera look-controls wasd-controls>
                      <a-entity  
                      cursor="fuse:true; fuseTimeout:500;"
                      rayOrigin:mouse;
@@ -87,7 +88,6 @@
                     <a-entity id="bushTree" obj-model="obj:#bushTreePR;" position="-24 0 2" rotation = "0 -80 0" scale="1.0 1.0 1.0" material="color:#fff; src: #bushTreesTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="bushTree2" obj-model="obj:#bushTreePR;" position="-4 -0.46 11.813" rotation = "0 -34 0" scale="1.0 1.0 1.0" material="color:#fff; src: #bushTreesTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
-
                     <a-entity id="cherry" obj-model="obj:#cherryTree;" position="-13 0 5.5" rotation = "0 -25 0" scale="1 1 1" material="color:#fff; src: #cTreeTXT;sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="tree3" obj-model="obj:#tree3;" position="20 0 -14" rotation = "0 92 0" scale="1.5 1.5 1.5" material="color:#fff; src:#skinnyTreeTXT; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="tree2" obj-model="obj:#tree2;" position="-25 0 -12" rotation = "0 -113 0" scale="1.1 1.1 1.1" material="color:#fff; src:#thiccTreeTXT; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
@@ -100,8 +100,26 @@
                     <a-entity id="flatRock" obj-model="obj:#flatRock;" position="-14 0 -7" rotation = "0 139 0" scale="2.5 2 1.8" material="color:#C1C7C0; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="flatRock1" obj-model="obj:#flatRock;" position="-1 -0.3 -5.5" rotation = "180 0 0" scale="3.2 2.1 2.7" material="color:#C1C7C0; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
+
+                    
                     <!--accessory-->
-                    <a-entity switch-environment id="orb" obj-model="obj:#orb;"  position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                    <a-sphere
+                     glow="enabled:true; scale:1.5; color: #ffdb9b;" 
+                     switch-environment id="orb" 
+                     position="3.6 5.04 7.9" 
+                     rotation = "0 0 0" 
+                     scale="0.6 0.6 0.6"
+                     material="color:#fcd897; transparent: true; opacity: 0.8; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" 
+                     shadow="cast:true; receive:true;">
+                        <a-animation attribute= "scale"
+                            dur = "4000"
+                            from= "0.8 0.8 0.8"
+                            to= " 0.9 0.9 0.9"
+                            direction='alternate'
+                            easing= "ease-in-out"
+                            repeat= "loop:true">
+                         </a-animation>  
+                    </a-sphere>
 
                     
                     <a-entity id="gate" obj-model="obj:#entGatePR;" position="-16 0 -12" rotation = "0 65 0" scale="1.0 1.0 1.0" material="color:#CA9B54; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
