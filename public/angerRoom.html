@@ -16,7 +16,7 @@
     </head>
     <body>
 
-        <a-scene shadow="type:basic;" id="PeaceRoom">
+        <a-scene shadow="type:basic;" id="AngerRoom">
                 <a-assets timeout="3000">
                   
                     <!--textures -->
@@ -40,7 +40,7 @@
 
 
                 </a-assets>
-
+ 
                 <!--camera stuff-->
                 <a-entity position="0 3 -2 "camera look-controls wasd-controls>
                     <a-entity  
@@ -59,9 +59,17 @@
 
                     <!--stuff loading-->
 
-                <a-sphere
+
+                
+
+
+
+                
+
+
+                <a-sphere 
                      glow="enabled:true; scale:1.5; color: #ffdb9b;" 
-                     switch-environment id="orb" 
+                     switch-environment1 id="orb" 
                      position="3.6 5.04 7.9" 
                      rotation = "0 0 0" 
                      scale="0.6 0.6 0.6"
@@ -79,9 +87,10 @@
 
 
 
+               
 
 
-                 <a-entity id ="snow" position="0 0 0" scale = "20 5 20" particle-system="preset: snow; particleCount: 50000; size:2; maxParticleCount: 100000"></a-entity>
+                
                     <!--TREESSSS-->
 
            
@@ -95,8 +104,8 @@
 
                    
                     <!--accessory-->
-                    <a-entity switch-environment id="orb" obj-model="obj:#orb;"  position="0 3 0" rotation = "0 0 0" scale="1.0 1.0 1.0" material="color:#FFF; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-
+                 
+                   <!-- <a-entity id ="snow" position="0 0 0" scale = "20 5 20" particle-system="preset: snow; particleCount: 50000; size:2; maxParticleCount: 100000"></a-entity> -->
 
                     <a-entity id="mountain" obj-model="obj:#mountainAR;" rotation="0 -23.9 0" position="92.31 -17.140 -118" scale="4.3 2.7 2.7" material="src: #mountainTXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
