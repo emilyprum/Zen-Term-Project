@@ -23,26 +23,21 @@
                 
                    
                     <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/AngerRoom/SkyAR.png">
-                    <img id="groundTXT" src="/assets/Textures/AngerRoom/ground.png">
-                    <img id="mountainTXT" src="/assets/Textures/AngerRoom/mountains_color_SNOW.png">
-                    <img id="tree1TXT" src="/assets/Textures/AngerRoom/foresttree.png">
-                    <img id="tree2TXT" src="/assets/Textures/AngerRoom/foresttree_1.png">
-
+                    <img id="mountainRoomTXT" src="/assets/Textures/AngerRoom/MountainRoom.png">
+                  
 
 
 
 
                     <!--models-->
-                    <a-asset-item id="groundAR" src="/assets/AngerRoom Models/ground.obj"></a-asset-item>
-                    <a-asset-item id="mountainAR" src="/assets/AngerRoom Models/Mountains.obj"></a-asset-item>
-                    <a-asset-item id="tree1AR" src="/assets/AngerRoom Models/foresttree.obj"></a-asset-item>
-                    <a-asset-item id="tree2AR" src="/assets/AngerRoom Models/foresttree_1.obj"></a-asset-item>
+                    <a-asset-item id="mountainRoom" src="/assets/AngerRoom Models/mountainRoom.obj"></a-asset-item>
+                   
 
 
                 </a-assets>
  
                 <!--camera stuff-->
-                <a-entity position="0 3 -2 "camera look-controls wasd-controls>
+                <a-entity position="-35 4.8 106  "camera look-controls wasd-controls>
                     <a-entity  
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
@@ -66,11 +61,11 @@
 
                 
 
-
+               <!--ORB-->
                 <a-sphere 
                      glow="enabled:true; scale:1.5; color: #ffdb9b;" 
                      switch-environment1 id="orb" 
-                     position="3.6 5.04 7.9" 
+                     position="-4.74 13.88 11.87" 
                      rotation = "0 0 0" 
                      scale="0.6 0.6 0.6"
                      material="color:#fcd897; transparent: true; opacity: 0.8; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" 
@@ -84,37 +79,13 @@
                             repeat= "loop:true">
                          </a-animation>  
                  </a-sphere>
+                 <a-entity id="mountainRoomALL" obj-model="obj:#mountainRoom;" position="0 -1 0" scale="1.0 1.0 1.0" material="color:#fff; src: #mountainRoomTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
-
-
-               
-
-
-                
-                    <!--TREESSSS-->
-
-           
-                    <a-entity id="tree1" obj-model="obj:#tree1AR;" rotation="0 -23.9 0" position="14 -8.68 -26.53" scale="1.3 1 1" material="src: #tree1TXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                   
-
-                    <a-entity id="tree2" obj-model="obj:#tree2AR;" rotation="0 90 0" position="-24.977 -9.440 181.084" scale="1 1 1" material="src: #tree2TXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-           
-
-
-
-                   
-                    <!--accessory-->
-                 
-                   <!-- <a-entity id ="snow" position="0 0 0" scale = "20 5 20" particle-system="preset: snow; particleCount: 50000; size:2; maxParticleCount: 100000"></a-entity> -->
-
-                    <a-entity id="mountain" obj-model="obj:#mountainAR;" rotation="0 -23.9 0" position="92.31 -17.140 -118" scale="4.3 2.7 2.7" material="src: #mountainTXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-
-                    
-                    <a-entity id="plane" obj-model="obj:#groundAR;" position="0 -9.0 0" scale="5.4 3.5 6.6" material="color:#AFE1A8; src:#groundTXT ; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                   <!--WATTEEERRRR-->
                     <a-ocean 
                         id="gardenPond"
-                        scale = "18.36 9.25 5.269"
-                        position="52.71 -9.3 -80"
+                        scale = "18.36 6.35 5.269"
+                        position="52.71 -1.28 -61.37"
                         rotation="-90.000 2.845 0"
                         color = "#ade2fa"
                         width = "10"

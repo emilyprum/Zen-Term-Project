@@ -1,0 +1,97 @@
+<html>
+    <head>
+   
+        <script src="/js/aframe.min.js"></script>
+        <script src="/js/spherical-env-map.js"></script>
+        <script src="/js/aframe-extras.js"></script>
+        <script src="/js/aframe-extras.min.js"></script>
+        <script src= "/js/switch-environment.js"></script>
+        <script src="/js/aframe-particle-system-component.min.js"></script>
+        <script src= "/js/glow.js"></script>
+
+
+
+
+    </head>
+    <body>
+
+        <a-scene shadow="type:basic;" id="AngerRoom">
+                <a-assets timeout="3000">
+                  
+                    <!--textures -->
+                
+                   
+                    <img crossorigin="anonymous" id="skymapMR" src="/assets/Textures/MenuRoom/SkyMR.png">
+                    <img id="menuRoomTXT" src="/assets/Textures/MenuRoom/MenuRoomPlane.png">
+                  
+
+
+
+
+                    <!--models-->
+                    <a-asset-item id="menuRoom" src="/assets/MenuRoom Models/plane.obj"></a-asset-item>
+                    <a-asset-item id ="circleBlinds" src = "/assets/MenuRoom Models/circleBlinds.obj"></a-asset-item>
+                   
+
+
+                </a-assets>
+ 
+                <!--camera stuff-->
+                <a-entity position="0 3 2  " camera look-controls wasd-controls>
+                    <a-entity  
+                    cursor="fuse:true; fuseTimeout:500;"
+                    rayOrigin:mouse;
+                    position="0 0 -1"
+                    geometry="primitive:ring; radiusInner:0.02; radiusOuter:0.03;"
+                    material="shader:flat; color:black;" >
+                   </a-entity>
+
+               </a-entity>
+               
+                    <!--lights-->
+                <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
+                <a-entity light="type:ambient; intensity:0.7; color:#FFF;"></a-entity>
+
+                    <!--stuff loading-->
+
+
+                
+
+
+
+                
+
+               <!--ORB-->
+                <a-sphere 
+                     glow="enabled:true; scale:1.5; color: #ffdb9b;" 
+                     switch-environment1 id="orb" 
+                     position="-4.74 13.88 11.87" 
+                     rotation = "0 0 0" 
+                     scale="0.6 0.6 0.6"
+                     material="color:#fcd897; transparent: true; opacity: 0.8; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" 
+                     shadow="cast:true; receive:true;">
+                        <a-animation attribute= "scale"
+                            dur = "4000"
+                            from= "0.8 0.8 0.8"
+                            to= " 0.9 0.9 0.9"
+                            direction='alternate'
+                            easing= "ease-in-out"
+                            repeat= "loop:true">
+                         </a-animation>  
+                 </a-sphere>
+                 <a-entity id="menuPlane" obj-model="obj:#menuRoom;" position="0 -1 0" scale="2.0 1.0 1.0" material="color:#fff; src: #menuRoomTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="menuCircle" obj-model="obj:#circleBlinds;" position="0 -3 -50" scale="20.0 20.0 20.0" material="color:#f71eff; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2; transparent: true; opacity: 0.5;" shadow="cast:true; receive:true;"></a-entity>
+
+             
+             
+                
+
+                    <a-entity id="sky" 
+                        geometry = "primitive:sphere; radius: 500;"
+                        material="shader:flat; src:#skymapMR; side:back; height:2048; width:2048" ></a-entity>
+                
+        </a-scene>
+      
+        
+    </body>
+</html>
