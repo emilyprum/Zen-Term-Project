@@ -23,6 +23,11 @@
                    
                     <img crossorigin="anonymous" id="skymapMR" src="/assets/Textures/MenuRoom/SkyMR.png">
                     <img id="menuRoomTXT" src="/assets/Textures/MenuRoom/MenuRoomPlane.png">
+                    <img id="euphoriaTXT" src="/assets/Textures/MenuRoom/euphoriaTXT.png">
+                    <img id="solaceTXT" src="/assets/Textures/MenuRoom/solace.png">
+                    <img id="elevationTXT" src="/assets/Textures/MenuRoom/elevation.png">
+
+
                   
 
 
@@ -31,6 +36,12 @@
                     <!--models-->
                     <a-asset-item id="menuRoom" src="/assets/MenuRoom Models/plane.obj"></a-asset-item>
                     <a-asset-item id ="circleBlinds" src = "/assets/MenuRoom Models/circleBlinds.obj"></a-asset-item>
+                    <a-asset-item id ="euphoria" src = "/assets/MenuRoom Models/euphoria.obj"></a-asset-item>
+                    <a-asset-item id ="solace" src = "/assets/MenuRoom Models/solace.obj"></a-asset-item>
+                    <a-asset-item id ="elevation" src = "/assets/MenuRoom Models/elevation.obj"></a-asset-item>
+
+
+
                    
 
 
@@ -51,7 +62,7 @@
                     <!--lights-->
                 <a-entity id="directionalCircle" light="type:directional; color:#f71eff; castShadow:true; intensity:1.5; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="0.022 12.197 -78.717"></a-entity>
                 <a-entity light="type:ambient; intensity:0.7; color:#FFF;"></a-entity>
-                <a-entity id = "circleIght" light="type:point; color:#f71eff; castShadow:true; intensity:3; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.548 54.352 -75.852"></a-entity>
+                <a-entity id = "circleLight" light="type:point; color:#f71eff; castShadow:true; intensity:3; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.548 54.352 -75.852"></a-entity>
 
 
                     <!--stuff loading-->
@@ -67,6 +78,9 @@
            
                  <a-entity id="menuPlane" obj-model="obj:#menuRoom;" position="0 -1 0" scale="2.0 1.0 1.0" material="color:#fff; src: #menuRoomTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                  <a-entity id="menuCircle" obj-model="obj:#circleBlinds;" position="0 -3 -50" scale="20.0 20.0 20.0" material="color:#f71eff; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2; transparent: true; opacity: 0.5;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="euphoriaOBJ" obj-model="obj:#euphoria;" position="10 6 -10 " scale="5 5 5" material="src:#euphoriaTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="solaceOBJ" obj-model="obj:#solace;" position="-10 6 -10 " scale="5 5 5" material="src:#solaceTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="elevationOBJ" obj-model="obj:#elevation;" position="0 6 -10 " scale="5.2 5.2 5.2" material="src:#elevationTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
              
              
