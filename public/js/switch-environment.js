@@ -69,12 +69,12 @@ AFRAME.registerComponent('in-env-orb', {
 
         Context_AF.el.addEventListener('mouseover', function(event) {
             console.log("mouseover");
-            Context_AF.switchEnv1();
+            Context_AF.loadmMenu();
 
 
         });
     },
-    switchEnv1 : function() {
+    loadmMenu : function() {
         const Context_AF = this;
         location.assign("index.html"); 
         
