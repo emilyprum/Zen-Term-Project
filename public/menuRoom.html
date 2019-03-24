@@ -39,6 +39,8 @@
                     <a-asset-item id ="euphoria" src = "/assets/MenuRoom Models/euphoria.obj"></a-asset-item>
                     <a-asset-item id ="solace" src = "/assets/MenuRoom Models/solace.obj"></a-asset-item>
                     <a-asset-item id ="elevation" src = "/assets/MenuRoom Models/elevation.obj"></a-asset-item>
+                    <a-asset-item id ="curve" src = "/assets/MenuRoom Models/curvedTing.obj"></a-asset-item>
+
 
 
 
@@ -53,8 +55,8 @@
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
                     position="0 0 -1"
-                    geometry="primitive:ring; radiusInner:0.02; radiusOuter:0.03;"
-                    material="shader:flat; color:black;" >
+                    geometry="primitive:ring; radiusInner:0.015; radiusOuter:0.02;"
+                    material="shader:flat; color:white;" >
                    </a-entity>
 
                </a-entity>
@@ -74,13 +76,16 @@
 
                 
 
-               <!--ORB-->
            
                  <a-entity id="menuPlane" obj-model="obj:#menuRoom;" position="0 -1 0" scale="2.0 1.0 1.0" material="color:#fff; src: #menuRoomTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                  <a-entity id="menuCircle" obj-model="obj:#circleBlinds;" position="0 -3 -50" scale="20.0 20.0 20.0" material="color:#f71eff; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2; transparent: true; opacity: 0.5;" shadow="cast:true; receive:true;"></a-entity>
-                 <a-entity id="euphoriaOBJ" obj-model="obj:#euphoria;" position="10 6 -10 " scale="5 5 5" material="src:#euphoriaTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity go-to-zen-room id="euphoriaOBJ" obj-model="obj:#euphoria;" position="10 6 -10 " scale="5 5 5" material="src:#euphoriaTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                  <a-entity id="solaceOBJ" obj-model="obj:#solace;" position="-10 6 -10 " scale="5 5 5" material="src:#solaceTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                 <a-entity id="elevationOBJ" obj-model="obj:#elevation;" position="0 6 -10 " scale="5.2 5.2 5.2" material="src:#elevationTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity go-to-mountain-room id="elevationOBJ" obj-model="obj:#elevation;" position="0 6 -10 " scale="5.2 5.2 5.2" material="src:#elevationTXT; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="curve1OBJ" obj-model="obj:#curve;" position="0 13 -16 " scale="1.7 1 1.1" material="color:#96dae0; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" light = "type:directional; color:#fff; intensity:2;"shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="curve2OBJ" obj-model="obj:#curve;" position="0 4 -16 " scale="1.7 1 1.1" material="color:#96dae0; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2;" light = "type:directional; color:#fff; intensity:2;"shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="curve3OBJ" obj-model="obj:#curve;" position="0 8.5 -16 " scale="1.7 150 1.1" material="color:#96dae0; sphericalEnvMap:#skymapAR; roughness:0.8; metalness:0.2; transparent: true; opacity:0.6;" light = "type:point; color:#fff; intensity:2;"shadow="cast:true; receive:true;"></a-entity>
+
 
              
              

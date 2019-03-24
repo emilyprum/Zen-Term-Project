@@ -4,8 +4,8 @@ AFRAME.registerComponent('switch-environment', {
         const Context_AF = this;
 
 
-        Context_AF.el.addEventListener('mousedown', function(event) {
-            console.log("mousedown");
+        Context_AF.el.addEventListener('mouseup', function(event) {
+            console.log("mouseup");
             Context_AF.switchEnv();
 
 
@@ -13,20 +13,41 @@ AFRAME.registerComponent('switch-environment', {
     },
     switchEnv : function() {
         const Context_AF = this;
-        location.assign("angerRoom.html"); 
+        location.assign("menuRoom.html"); 
         
         let scene = document.querySelector('#PeaceRoom');
     }
 });
 
-AFRAME.registerComponent('switch-environment1', {
+AFRAME.registerComponent('go-to-mountain-room', {
     schema: {},
     init : function() {
         const Context_AF = this;
 
 
-        Context_AF.el.addEventListener('mousedown', function(event) {
-            console.log("mousedown");
+        Context_AF.el.addEventListener('mouseup', function(event) {
+            console.log("mouseup");
+            Context_AF.switchEnv1();
+
+
+        });
+    },
+    switchEnv1 : function() {
+        const Context_AF = this;
+        location.assign("AngerRoom.html"); 
+        
+        let scene = document.querySelector('#AngerRoom');
+    }
+});
+
+AFRAME.registerComponent('go-to-zen-room', {
+    schema: {},
+    init : function() {
+        const Context_AF = this;
+
+
+        Context_AF.el.addEventListener('mouseup', function(event) {
+            console.log("mouseup");
             Context_AF.switchEnv1();
 
 
