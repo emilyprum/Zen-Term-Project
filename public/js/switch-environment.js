@@ -19,7 +19,7 @@ AFRAME.registerComponent('go-to-mountain-room', {
     }
 });
 
-AFRAME.registerComponent('go-to-zen-room', {
+AFRAME.registerComponent('go-to-euphoria-room', {
     schema: {},
     init : function() {
         const Context_AF = this;
@@ -27,36 +27,16 @@ AFRAME.registerComponent('go-to-zen-room', {
 
         Context_AF.el.addEventListener('mousedown', function(event) {
             console.log("mousedown");
-            Context_AF.switchEnv1();
+            Context_AF.switchEnv3();
 
 
         });
     },
-    switchEnv1 : function() {
+    switchEnv3 : function() {
         const Context_AF = this;
-        location.assign("index.html"); 
+        location.assign("euphoriaRoom.html"); 
         
-        let scene = document.querySelector('#AngerRoom');
+        
     }
 });
 
-AFRAME.registerComponent('in-env-orb', {
-    schema: {},
-    init : function() {
-        const Context_AF = this;
-
-
-        Context_AF.el.addEventListener('mouseover', function(event) {
-            console.log("mouseover");
-            Context_AF.loadmMenu();
-
-
-        });
-    },
-    loadmMenu : function() {
-        const Context_AF = this;
-        location.assign("index.html"); 
-        
-        let scene = document.querySelector('#AngerRoom');
-    }
-});
