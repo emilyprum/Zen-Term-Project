@@ -24,13 +24,26 @@
                 
                    
                     <img crossorigin="anonymous" id="skymapPR" src="/assets/Textures/EuphoriaRoom/Sky.png">
+                    <img crossorigin="anonymous" id="euphoriaTXT" src="/assets/Textures/EuphoriaRoom/islandTXT.png">
+                    <img crossorigin="anonymous" id="merryGoTXT" src="/assets/Textures/EuphoriaRoom/merry.png">
+                    <img crossorigin="anonymous" id="merryChickenTXT" src="/assets/Textures/EuphoriaRoom/chicken.png">
+
                     
 
 
 
 
                     <!--models-->
-                    
+                    <a-asset-item id="cloud1" src="/assets/Euphoria Models/Cloud1.obj"></a-asset-item>
+                    <a-asset-item id="cloud2" src="/assets/Euphoria Models/Cloud2.obj"></a-asset-item>
+                    <a-asset-item id="cloud3" src="/assets/Euphoria Models/Cloud3.obj"></a-asset-item>
+                    <a-asset-item id="cloud4" src="/assets/Euphoria Models/Cloud4.obj"></a-asset-item>
+                    <a-asset-item id="euphoriaOBJ" src="/assets/Euphoria Models/EuphoriaRoom_OBJ.obj"></a-asset-item>
+                    <a-asset-item id="merryGoOBJ" src="/assets/Euphoria Models/MerryGoRound.obj"></a-asset-item>
+                    <a-asset-item id="chickenOBJ" src="/assets/Euphoria Models/MerryChickens.obj"></a-asset-item>
+
+
+
 
 
 
@@ -38,7 +51,7 @@
                 </a-assets>
  
                 <!--camera stuff-->
-                <a-entity position="-35 4.8 106  "camera look-controls wasd-controls>
+                <a-entity position="49 105 -55  "camera look-controls wasd-controls>
                     <a-entity  
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
@@ -55,14 +68,39 @@
 
                     <!--stuff loading-->
 
+        <!--Environment-->
 
                 
+                <a-entity id="euphoria" obj-model="obj:#euphoriaOBJ;" position="0 -2.5 0" scale="8 8 8" material="color:#fff; src: #euphoriaTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                <a-entity id="merryGo" obj-model="obj:#merryGoOBJ;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryGoTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                <a-entity id="merryGoChick" obj-model="obj:#chickenOBJ;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryChickenTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;">
+
+                    <a-animation attribute= "rotation"
+                    dur = "10000"
+                    from= "0 360 0"
+                    to= "0 0 0"
+                    easing= "ease-in-out-quad"
+               
+                    repeat= "loop:true">
+                 </a-animation> 
+                </a-entity>
 
 
-
+                <a-ocean 
+                id="water1"
+                scale = "2.92 4.3 1.12"
+                position="23.562 100 -56.021"
+                rotation="-86.5 75 -155"
+                color = "#ade2fa"
+                width = "10"
+                density="2" 
+                depth = "5"
+                >
+            </a-ocean>
                 
 
-               <!--Environment-->
+              
+
 
                <!--ORB-->
                 <a-sphere 
