@@ -6,15 +6,29 @@ AFRAME.registerComponent('switch-environment', {
 
         Context_AF.el.addEventListener('mousedown', function(event) {
             console.log("mousedown");
-            Context_AF.switchEnv();
+            Context_AF.loadMenu();
 
+            // Context_AF.el.addEventListener('mousedown', function(event){
+            //     console.log("delete menu");
+            //     Context_AF.deleteMenu();
+            // });
 
         });
     },
-    switchEnv : function() {
+    loadMenu : function() {
         const Context_AF = this;
         location.assign("menuRoom.html"); 
+
+        //create Elements
         
         let scene = document.querySelector('#PeaceRoom');
-    }
+    } //,
+    // deleteMenu : function() {
+    //     const Context_AF = this;
+    //     location.assign("menuRoom.html"); 
+
+    //     //create Elements
+        
+    //     let scene = document.querySelector('#PeaceRoom');
+    // }
 });
