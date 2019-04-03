@@ -27,6 +27,7 @@
                     <img crossorigin="anonymous" id="euphoriaTXT" src="/assets/Textures/EuphoriaRoom/islandTXT.png">
                     <img crossorigin="anonymous" id="merryGoTXT" src="/assets/Textures/EuphoriaRoom/merry.png">
                     <img crossorigin="anonymous" id="merryChickenTXT" src="/assets/Textures/EuphoriaRoom/chicken.png">
+                    <img crossorigin="anonymous" id="hotAirBalloonTXT" src="/assets/Textures/EuphoriaRoom/hotAirBalloonTXT.png">
 
                     
 
@@ -41,6 +42,7 @@
                     <a-asset-item id="euphoriaOBJ" src="/assets/Euphoria Models/EuphoriaRoom_OBJ.obj"></a-asset-item>
                     <a-asset-item id="merryGoOBJ" src="/assets/Euphoria Models/MerryGoRound.obj"></a-asset-item>
                     <a-asset-item id="chickenOBJ" src="/assets/Euphoria Models/MerryChickens.obj"></a-asset-item>
+                    <a-asset-item id="hotAirBalloonOBJ" src="/assets/Euphoria Models/hotAirBalloon_OBJ.obj"></a-asset-item>
 
 
 
@@ -70,9 +72,27 @@
 
         <!--Environment-->
 
-                
+        <a-entity id="hotAir" obj-model="obj:#hotAirBalloonOBJ;" position="-36.548 98.396 -1.6" scale="1 1 1" material="color:#fff; src: #hotAirBalloonTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;">
+            <a-animation attribute= "rotation"
+            dur = "40000"
+            from= "0 360 0"
+            to= "0 0 0"
+            easing= "ease-in-out-quad"
+            repeat= "loop:true">
+         </a-animation> 
+      <a-animation attribute= "position"
+      dur = "40000"
+    
+      from= "-36.548 98.396 -1.6"
+      to = "74.5 106 16"
+      easing= "ease-in-out-quad"
+      direction="alternate"
+      repeat= "loop:true">
+   </a-animation> 
+        </a-entity>
+
                 <a-entity id="euphoria" obj-model="obj:#euphoriaOBJ;" position="0 -2.5 0" scale="8 8 8" material="color:#fff; src: #euphoriaTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                <a-entity id="merryGo" obj-model="obj:#merryGoOBJ;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryGoTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                <a-entity id="merryGo" obj-model="obj:#merryGoOBJ;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryGoTXT; sphericalEnvMap:#skymapPR; roughness:0.3; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                 <a-entity id="merryGoChick" obj-model="obj:#chickenOBJ;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryChickenTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;">
 
                     <a-animation attribute= "rotation"
@@ -94,14 +114,45 @@
                 color = "#bffff6"
                 width = "10"
                 density="10" 
-                depth = "5.2"
+                depth = "5.1"
                 >
                 </a-ocean>
-                
+                <a-ocean 
+                id="water2"
+                scale = "1.68 5.6"
+                position="21.7 85.88 -69.5"
+                rotation="5.5 -164.69 -178.4 "
+                color = "#bffff6"
+                width = "10"
+                density="10" 
+                depth = "5.1"
+                >
+                </a-ocean>
+                <a-ocean 
+                id="water3"
+                scale = "1.68 5.6"
+                position="21.7 85.88 -69.5"
+                rotation="5.5 -164.69 -178.4 "
+                color = "#bffff6"
+                width = "10"
+                density="5" 
+                depth = "5.1"
+                >
+                </a-ocean>
+            
                 <!---->
-                <a-entity id = "snow" particle-system="preset: snow; particleCount: 600; size: 2;" scale="0.5 0.5 1" position= "-38 166 92.3" rotation- "0 0 -18"></a-entity>
+                <a-entity id = "snow" 
+                particle-system="preset: snow; particleCount: 400; size: 2;" 
+                scale="0.5 0.5 1" 
+                position= "-38 166 92.3" 
+                rotation- "0 0 -18"></a-entity>
 
-              
+                <a-entity id = "snow1" 
+                particle-system="preset: snow; particleCount: 100; size: 1;" 
+                scale="0.3 0.3 0.3" 
+                position= "115 106 -52" 
+                rotation- "0 0 -18"></a-entity>
+
 
 
                <!--ORB-->
@@ -110,7 +161,7 @@
                      switch-environment id="orb" 
                      position="-4.74 13.88 11.87" 
                      rotation = "0 0 0" 
-                     scale="0.6 0.6 0.6"
+                     scale="0.6 -1 0.6"
                      material="color:#fcd897; transparent: true; opacity: 0.8; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" 
                      shadow="cast:true; receive:true;">
                         <a-animation attribute= "scale"
