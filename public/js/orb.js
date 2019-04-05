@@ -1,4 +1,4 @@
-AFRAME.registerComponent('switch-environment', {
+AFRAME.registerComponent('menu-orb', {
     schema: {},
     init : function() {
         const Context_AF = this;
@@ -16,12 +16,23 @@ AFRAME.registerComponent('switch-environment', {
         });
     },
     loadMenu : function() {
+      
         const Context_AF = this;
-        location.assign("menuRoom.html"); 
 
-        //create Elements
+    
+        let ExitMenu = document.createElement('a-entity');
+        ExitMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/exit_OBJ.obj'});
+        ExitMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/ExitTXT.png'}, {transparent: true} );
+        ExitMenu.setAttribute('position', {x:-0.242, y:3.6, z:-18.5});
+        ExitMenu.setAttribute('rotation', {x:0, y:0, z:0});
+        ExitMenu.setAttribute('scale', {x:1, y:1, z:1});
         
-        let scene = document.querySelector('#PeaceRoom');
+        let scene = document.querySelector('a-scene');
+        scene.appendChild(ExitMenu);
+
+
+
+
     } //,
     // deleteMenu : function() {
     //     const Context_AF = this;
