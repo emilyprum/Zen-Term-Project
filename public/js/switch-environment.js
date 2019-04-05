@@ -6,12 +6,12 @@ AFRAME.registerComponent('go-to-mountain-room', {
 
         Context_AF.el.addEventListener('mousedown', function(event) {
             console.log("mousedown");
-            Context_AF.switchEnv1();
+            Context_AF.switchEnv();
 
 
         });
     },
-    switchEnv1 : function() {
+    switchEnv : function() {
         const Context_AF = this;
         location.assign("AngerRoom.html"); 
         
@@ -27,18 +27,40 @@ AFRAME.registerComponent('go-to-euphoria-room', {
 
         Context_AF.el.addEventListener('mousedown', function(event) {
             console.log("mousedown");
-            Context_AF.switchEnv3();
+            Context_AF.switchEnv();
 
 
         });
     },
-    switchEnv3 : function() {
+    switchEnv : function() {
         const Context_AF = this;
         location.assign("euphoriaRoom.html"); 
         
         
     }
 });
+
+AFRAME.registerComponent('go-to-solace-room', {
+    schema: {},
+    init : function() {
+        const Context_AF = this;
+
+
+        Context_AF.el.addEventListener('mousedown', function(event) {
+            console.log("mousedown");
+            Context_AF.switchEnv();
+
+
+        });
+    },
+    switchEnv : function() {
+        const Context_AF = this;
+        location.assign("solaceRoom.html"); 
+        
+        
+    }
+});
+
 
 AFRAME.registerComponent('go-to-menu-room', {
     schema: {},
@@ -48,12 +70,12 @@ AFRAME.registerComponent('go-to-menu-room', {
 
         Context_AF.el.addEventListener('mousedown', function(event) {
             console.log("mousedown");
-            Context_AF.switchEnv3();
+            Context_AF.switchEnv();
 
 
         });
     },
-    switchEnv3 : function() {
+    switchEnv : function() {
         const Context_AF = this;
         location.assign("menuRoom.html"); 
         
