@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <a-scene shadow="type:basic;" id="AngerRoom">
+        <a-scene fog="type: exponential; color: #FFF; density: 0.01;" shadow="type:basic;" id="AngerRoom">
                 <a-assets timeout="3000">
                   
                     <!--textures -->
@@ -28,14 +28,14 @@
                     <img id="beachTXT" src="/assets/Textures/SolaceRoom/BeachLayout_TXT.png">
 
 
-                    <a-asset-item id = "beachGround" src:"/assets/SolaceRoom Model/ground.obj" ></a-asset-item>
+                    <a-asset-item id = "beachGround" src="/assets/SolaceRoom Models/ground.obj" ></a-asset-item>
 
 
 
                 </a-assets>
  
                 <!--camera stuff-->
-                <a-entity position="0 0 0  "camera look-controls wasd-controls>
+                <a-entity position="19.2 4 10  "camera look-controls wasd-controls>
                     <a-entity  
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
@@ -78,9 +78,20 @@
                          </a-animation>  
                  </a-sphere>
                  
-                 <a-entity id="solaceRoom" obj-model="obj:#beachGround" position="0 -1 0" scale="1.0 1.0 1.0" material="color:#fff; src: #beachTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="solaceRoom" obj-model="obj:#beachGround" position="0 -6 0" scale="1.0 1.0 1.0" rotation = "-180 0 -180" material="color:#fff; src: #beachTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
 
-
+            <!--WATTEEERRRR-->
+            <a-ocean 
+            id="gardenPond"
+            position = "0.228 -5.45 -35.9"
+            rotation="270 0 0"
+            scale = "5.5 6.33 1.42"
+            color = "#c4fffa"
+            width = "10"
+            density="10" 
+            depth = "20"
+            >
+            </a-ocean>
 
 
 
