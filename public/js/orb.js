@@ -33,6 +33,7 @@ AFRAME.registerComponent('menu-orb', {
 
 
         let BackToMenu = document.createElement('a-entity');
+        BackToMenu.setAttribute('go-to-menu-room',{});
         BackToMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/backToMenu_OBJ.obj'});
         BackToMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/BackToMenuRoomTXT.png'} );
         BackToMenu.setAttribute('position', {x:-0.205, y:3.7, z:-18.5});
