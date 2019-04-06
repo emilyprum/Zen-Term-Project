@@ -33,8 +33,11 @@
                     <!--Preloaded Soudns-->
                     
                         <!-- <audio id="chickenMerryGo"  preload="auto"></audio> -->
-                        <a-asset-item crossorigin="anonymous" id="chickenMerry" src="/assets/Sounds/EuphoriaRoom/Chicken_Circus.mp3" response-type="arraybuffer"></a-asset-item>
-                        <a-asset-item crossorigin="anonymous" id="christmas" src="/assets/Sounds/EuphoriaRoom/Christmas_JingleBells.mp3" response-type="arraybuffer"></a-asset-item>
+                        <a-asset-item crossorigin="anonymous" id="chickenMerry" src="/assets/Sounds/EuphoriaRoom/ChickenCircus.mp3" response-type="arraybuffer"></a-asset-item>
+                        <a-asset-item crossorigin="anonymous" id="christmas" src="/assets/Sounds/EuphoriaRoom/JingleBells.mp3" response-type="arraybuffer"></a-asset-item>
+                        <a-asset-item crossorigin="anonymous" id="boatMountain" src="/assets/Sounds/EuphoriaRoom/BoatMountain.mp3" response-type="arraybuffer"></a-asset-item>
+                        <a-asset-item crossorigin="anonymous" id="waterFall" src="/assets/Sounds/EuphoriaRoom/Waterfall.mp3" response-type="arraybuffer"></a-asset-item>
+
 
 
 
@@ -94,10 +97,17 @@
       repeat= "loop:true">
    </a-animation> 
         </a-entity>
-                <a-entity id= "christmasMusic" position=" 115 77.5 -54.5" sound="src: #christmas; autoplay:true;on:click; maxDistance: 100; rolloffFactor: 20; volume:9;" ></a-entity>
+                <!--Sounds-->
+                <a-entity id= "christmasMusic" geometry="primitive: box" material="visible:false;"scale="10 10 10 " position=" 115 77.5 -54.5" sound="src: #christmas;on:click; maxDistance: 100; rolloffFactor: 20; volume:9;" ></a-entity>
+                <a-entity id= "boat" geometry="primitive: box" material="visible:false;"scale="10 10 10 " position="-122.4 66.25 -72.4" sound="src: #boatMountain;on:click; maxDistance: 100; rolloffFactor: 20; volume:13;" ></a-entity>
+                <a-entity id= "waterfall" geometry="primitive: box" material="visible:false;"scale="14.6 2 32.75 " position="22.6 100.5 -56.2" sound="src: #waterFall;autoplay:true; loop:true; maxDistance: 100; rolloffFactor: 20; volume:9;" ></a-entity>
+
+
+
+                <!--objects-->
                 <a-entity id="euphoria" obj-model="obj:#euphoriaOBJ;" position="0 -2.5 0" scale="8 8 8" material="color:#fff; src: #euphoriaTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                 <a-entity  id="merryGo" obj-model="obj:#merryGoOBJ;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryGoTXT; sphericalEnvMap:#skymapPR; roughness:0.3; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                <a-entity  id="merryGoChick" obj-model="obj:#chickenOBJ;" sound="src:#chickenMerry; autoplay: false; maxDistance: 100; rolloffFactor: 20; loop:false; on:click" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryChickenTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;">
+                <a-entity  id="merryGoChick" obj-model="obj:#chickenOBJ;" sound="src:#chickenMerry; autoplay: false; maxDistance: 100; rolloffFactor: 20; loop:false; on:click; volume:5;" position="-18 91.7 -151" scale="1 1 1" material="color:#fff; src: #merryChickenTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;">
 
                     <a-animation attribute= "rotation"
                     dur = "10000"
