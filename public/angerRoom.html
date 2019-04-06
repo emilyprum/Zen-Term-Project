@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <a-scene shadow="type:basic;" id="AngerRoom">
+        <a-scene shadow="type:basic;" id="AngerRoom" >
                 <a-assets timeout="3000">
                   
                     <!--textures -->
@@ -45,12 +45,18 @@
                     <a-asset-item id="cloud4" src="/assets/AngerRoom Models/Cloud4.obj"></a-asset-item>
 
 
+                    <!--sounds-->
+                    <a-asset-item crossorigin="anonymous" id="campFireSound" src="/assets/Sounds/ElevationRoom/Campfire.mp3" response-type="arraybuffer"></a-asset-item>
+                    <a-asset-item crossorigin="anonymous" id="cricketsSound" src="/assets/Sounds/ElevationRoom/Crickets.mp3" response-type="arraybuffer"></a-asset-item>
+                    <a-asset-item crossorigin="anonymous" id="ElevationSound" src="/assets/Sounds/ElevationRoom/Dreaming.mp3" response-type="arraybuffer"></a-asset-item>
+                  
+
 
 
                 </a-assets>
  
                 <!--camera stuff-->
-                <a-entity position="-35 4.8 106  "camera look-controls wasd-controls>
+                <a-entity position="-35 4.8 106  "camera look-controls wasd-controls >
                     <a-entity  
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
@@ -92,9 +98,9 @@
                             repeat= "loop:true">
                          </a-animation>  
                  </a-sphere>
-                 <a-entity id="mountainRoomALL" obj-model="obj:#mountainRoom;" position="0 -1 0" scale="1.0 1.0 1.0" material="color:#fff; src: #mountainRoomTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="mountainRoomALL" obj-model="obj:#mountainRoom;" position="0 -1 0" scale="1.0 1.0 1.0" material="color:#fff; src: #mountainRoomTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;" sound="src:#ElevationSound; loop:true; autoplay:true;"></a-entity>
 
-                 <a-entity id="campFire" obj-model="obj:#wood;" position="-53.3 1.64 80.32" scale="0.8 0.8 0.8" material="color:#fff; src: #woodTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="campFire" obj-model="obj:#wood;" position="-53.3 1.64 80.32" scale="0.8 0.8 0.8" material="color:#fff; src: #woodTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" sound="src: #campFireSound;autoplay:true; loop:true; maxDistance: 100; rolloffFactor: 20; volume:15;"shadow="cast:true; receive:true;"></a-entity>
                  <a-entity id="flames" obj-model="obj:#fire;" position="-53.3 1.64 80.32" scale="0.8 0.8 0.8" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;"  shadow="cast:true; receive:true;">
                     <a-animation
                         attribute="material.color"
@@ -131,12 +137,12 @@
 
                    <a-light
                    type="directional"
-                   intensity = "0.5"
+                   intensity = "0.3"
                    color="#ffc58a"
                    >
                     <a-animation
                     attribute="intensity"
-                    from = "0.5"
+                    from = "0.3"
                     to="0.2"
                     easing = "ease-in-out-quad"
                     direction="alternate"
