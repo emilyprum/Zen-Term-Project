@@ -49,6 +49,7 @@
                     <a-asset-item crossorigin="anonymous" id="campFireSound" src="/assets/Sounds/ElevationRoom/Campfire.mp3" response-type="arraybuffer"></a-asset-item>
                     <a-asset-item crossorigin="anonymous" id="cricketsSound" src="/assets/Sounds/ElevationRoom/Crickets.mp3" response-type="arraybuffer"></a-asset-item>
                     <a-asset-item crossorigin="anonymous" id="ElevationSound" src="/assets/Sounds/ElevationRoom/Dreaming.mp3" response-type="arraybuffer"></a-asset-item>
+                    <a-asset-item crossorigin="anonymous" id="WaterSound" src="/assets/Sounds/SolaceRoom/oceanSounds.mp3" response-type="arraybuffer"></a-asset-item>
                   
 
 
@@ -150,6 +151,7 @@
 
                    <!--WATTEEERRRR-->
                     <a-ocean 
+                        sound= "src: #WaterSound; loop:true; autoplay:true; maxDistance: 100; rolloffFactor: 20; volume:10;"
                         id="gardenPond"
                         scale = "18.36 6.35 5.269"
                         position="52.71 -1.28 -61.37"
