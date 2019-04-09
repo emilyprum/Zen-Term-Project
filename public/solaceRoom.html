@@ -29,6 +29,7 @@
 
 
                     <a-asset-item id = "beachGround" src="/assets/SolaceRoom Models/ground.obj" ></a-asset-item>
+                    <a-asset-item crossorigin="anonymous" id="AnxietyRoomSound" src="/assets/Sounds/SolaceRoom/Descent.mp3" response-type="arraybuffer"></a-asset-item>
 
 
 
@@ -61,6 +62,7 @@
 
                <!--Environment-->
                 <a-sphere 
+                    solace-orb
                      glow="enabled:true; scale:1.5; color: #ffdb9b;" 
                      switch-environment id="orb" 
                      position="-4.74 13.88 11.87" 
@@ -78,7 +80,7 @@
                          </a-animation>  
                  </a-sphere>
                  
-                 <a-entity id="solaceRoom" obj-model="obj:#beachGround" position="0 -6 0" scale="1.0 1.0 1.0" rotation = "-180 0 -180" material="color:#fff; src: #beachTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
+                 <a-entity id="solaceRoom" obj-model="obj:#beachGround" position="0 -6 0" scale="1.0 1.0 1.0" rotation = "-180 0 -180" material="color:#fff; src: #beachTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" sound="src:#AnxietyRoomSound; volume:10; autoplay:true; loop:true;" shadow="cast:true; receive:true;"></a-entity>
 
             <!--WATTEEERRRR-->
             <a-ocean 

@@ -82,4 +82,24 @@ AFRAME.registerComponent('go-to-menu-room', {
         
     }
 });
+AFRAME.registerComponent('go-to-zen-room', {
+    schema: {},
+    init : function() {
+        const Context_AF = this;
+
+
+        Context_AF.el.addEventListener('mousedown', function(event) {
+            console.log("mousedown");
+            Context_AF.switchEnv();
+
+
+        });
+    },
+    switchEnv : function() {
+        const Context_AF = this;
+        location.assign("index.html"); 
+        
+        
+    }
+});
 
