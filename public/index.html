@@ -36,7 +36,7 @@
 
 
                     <!--Sounds-->
-                    <!-- <a-asset-item crossorigin="anonymous" id="zenRoomSound" src="/assets/Sounds/ZenRoom/zenRoom.mp3" response-type="arraybuffer"></a-asset-item> -->
+                    <a-asset-item crossorigin="anonymous" id="zenRoomSound" src="/assets/Sounds/ZenRoom/zenRoom.mp3" response-type="arraybuffer"></a-asset-item>
                     <a-asset-item crossorigin="anonymous" id="waterSound" src="/assets/Sounds/ZenRoom/water.mp3" response-type="arraybuffer"></a-asset-item>
                     
 
@@ -132,7 +132,7 @@
 
                     <!-- sound="src: #zenRoomSound; autoplay:true; loop:true;" -->
                     <a-entity id="gate" obj-model="obj:#entGatePR;" position="-16 0 -12" rotation = "0 65 0" scale="1.0 1.0 1.0" material="color:#CA9B54; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                    <a-entity id="plane" obj-model="obj:#planePR;" position="0 -1.5 4.5" scale="1.0 1.0 1.0" material="color:#AFE1A8; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;"  shadow="cast:true; receive:true;"></a-entity>
+                    <a-entity id="plane" obj-model="obj:#planePR;" position="0 -1.5 4.5" scale="1.0 1.0 1.0" material="color:#AFE1A8; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" sound="src: #zenRoomSound; autoplay:true; loop:true;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="temple" obj-model="obj:#templePR;" position="0 0 -25" scale="1.0 1.0 1.0" material="color:#fff; src:#templeTXT; sphericalEnvMap:#skymapPR; roughness:0.9; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="bridge" obj-model="obj:#bridge;" position="3.3 -0.2 8" rotation = "0 8 0" scale="2.8 2.9 4.1" material="color:#D5C09A; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="rockPath1" obj-model="obj:#rockPath1;" position="-13 -0.22 -12.5" rotation = "0 -129 0" scale="1.9 1 2.9" material="color:#C1C7C0; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
