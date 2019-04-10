@@ -338,7 +338,7 @@ AFRAME.registerComponent('solace-orb', {
 
         let meditateMenu = document.createElement('a-entity');
         
-        meditateMenu.setAttribute('sound', {src:'/assets/Sounds/SolaceRoom/AnxietyRoomScript.mp3', on:'click', volume:30} );
+        meditateMenu.setAttribute('sound', {src:'/assets/Sounds/SolaceRoom/AnxietyRoomScript.mp3', on:'click', volume:15} );
 
         meditateMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/meditate_OBJ.obj'});
         meditateMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/meditateTXT.png'} );
