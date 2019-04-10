@@ -10,11 +10,11 @@ app.use((express.static(__dirname + '/public'))); //set root dir to the public f
 
 //routes
 app.get('/color', function(req,res) {
-    res.sendFile(__dirname + '/public/color.html');
+    res.sendFile(__dirname + '/public/client.html');
 });
 
 app.get('/controller', function(req,res) {
-    res.sendFile(__dirname + '/public/controller.html');
+    res.sendFile(__dirname + '/public/admin.html');
 });
 
 //websocket stuff
@@ -30,23 +30,26 @@ socketIO.on('connection', function(socket) {
     //socketIO.sockets = all clients
 
     // these are the functions that get passed.. this passes in the color
-    socket.on('Hi', function(data) {  
+    socket.on('Hello', function(data) {  
         console.log('hi');
-
-
-        var xpos = Math.random() * (10 - 0) + 0;
-        var ypos = Math.random() * (10 - (-5)) + (-5);
-        var zpos = Math.random() * (40 - (-20)) + (-20);
-        socketIO.sockets.emit('HiUser', {xpos, ypos, zpos});
+        var message = "Hello"
+        socketIO.sockets.emit('chat message', message);
         
     });
-
 
     socket.on('HowDay', function(data) {  
         console.log('working');
         var message = "How was your day?"
         
-        socketIO.sockets.emit('chat message', {message});
+        socketIO.sockets.emit('chat message', message);
+        
+    });
+
+    socket.on('Feeling', function(data) {  
+        console.log('working');
+        var message = "How are you feeling?"
+        
+        socketIO.sockets.emit('chat message', message);
         
     });
 

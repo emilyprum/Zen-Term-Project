@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           
+    </head>
+    <body>
+        <h1>Talk to your friend in VR</h1>
+        
+        <!-- some very nice color buttons -->
+        <button style="
+            background-color: rgb(224, 224, 224); 
+            font-family:Helvetica;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;"
+         id="Hello" >Hello</button>
+        <button 
+        style="
+            background-color: rgb(224, 224, 224); 
+            font-family:Helvetica;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;"
+        
+        id="Feeling" >How are you feeling?</button>
+
+        <button 
+        style="
+            background-color: rgb(224, 224, 224); 
+            font-family:Helvetica;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;"
+        id="HowDay" >How was your day?</button>
+    
+
+
+        <!-- scripts go to bottom if you want them to execute AFTER the rest of the web page renders -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            let socket = io();
+
+            //default connect event
+            socket.on('connect', function() {
+                console.log("connected!");
+            });
+
+            //let's send some events to the server to pass on. Programmatic telephone game!
+            //querySelector() is a more modern and versatile function of getElementById()
+            //#name or class
+            //.name for classes
+            //etc.
+            //https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector 
+            //note that querySelector can also be used on elements so that you only search for their children
+            //instead of all elements within teh "document"
+
+            var points = 0;
+            //these activate the function
+          
+            document.querySelector('#Hello').addEventListener('click', function() {
+                socket.emit('Hello');
+            });
+            document.querySelector('#HowDay').addEventListener('click', function() {
+                socket.emit('HowDay');
+            });
+            document.querySelector('#Feeling').addEventListener('click', function() {
+                socket.emit('Feeling');
+            });
+
+
+
+            socket.on('addPoints', function(data) {
+               
+
+                {
+                    console.log("working");
+                    points += data;
+                    document.getElementById("playerPoints").innerHTML =points ;
+                    return points;
+                   
+                    
+                }
+                
+            });
+
+
+
+
+
+        </script>
+    </body>
+</html>

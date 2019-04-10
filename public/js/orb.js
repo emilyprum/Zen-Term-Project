@@ -52,6 +52,7 @@ AFRAME.registerComponent('menu-orb', {
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
+        DuoTalkMenu.setAttribute('duo-talk',{});
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
         DuoTalkMenu.setAttribute('position', {x:-0.05, y:3.5, z:-18.5});
@@ -145,6 +146,7 @@ AFRAME.registerComponent('mountain-orb', {
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
+        DuoTalkMenu.setAttribute('duo-talk',{});
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
         DuoTalkMenu.setAttribute('position', {x:-4.54, y:5.1, z:11.87});
@@ -237,6 +239,7 @@ AFRAME.registerComponent('euphoria-orb', {
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
+        DuoTalkMenu.setAttribute('duo-talk',{});
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
         DuoTalkMenu.setAttribute('position', {x:50.6, y:4.3, z:-43.3});
@@ -325,6 +328,7 @@ AFRAME.registerComponent('solace-orb', {
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
+        DuoTalkMenu.setAttribute('duo-talk',{});
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
         DuoTalkMenu.setAttribute('position', {x:-4.60, y:-1, z:11.87});

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/js/spherical-env-map.js"></script>
+        <script src="/js/aframe.min.js"></script>
+        <script src="/js/aframe-extras.js"></script>
+        <script src="/js/aframe-extras.min.js"></script>
+    </head>
+    <body>
+        <h1>This is the color client</h1>
+        <a-scene>
+            <a-assets>
+                <img id="BG" src= "assets/Textures/ChatRoom/BG.png">
+             </a-assets>
+                <!--camera stuff-->
+            <a-entity position="0 3 -2 "camera look-controls wasd-controls>
+                <a-entity  
+                cursor="fuse:true; fuseTimeout:500;"
+                rayOrigin:mouse;
+                position="0 0 -1"
+                geometry="primitive:ring; radiusInner:0.015; radiusOuter:0.02;"
+                material="shader:flat; color:white;" >
+                </a-entity>
+
+            </a-entity>
+            <!--lights-->
+            <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
+            <a-entity light="type:ambient; intensity:0.7; color:#adbcd3;"></a-entity>
+
+
+
+                       
+            <a-text id="msg" sentence-text="" value="  " material="color: blue" position="0 2 -8" text="width: 20" align="center" rotation="" scale="" visible=""></a-text>
+
+                        
+            <a-entity id="sky" 
+            geometry = "primitive:sphere; radius: 500;"
+            material="shader:flat; src:#BG; side:back; height:2048; width:2048" ></a-entity>
+ 
+
+
+        </a-scene>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            let socket = io();
+
+            //default connect event
+            socket.on('connect', function() {
+                console.log("connected!");
+            });
+
+            // recieving stuff that goes into color-change, passed through app.js
+            socket.on('chat message', function(data){
+                var message = data;
+
+                var sceneEl = document.querySelector('a-scene');
+                var text = sceneEl.querySelector('#msg');
+                text.setAttribute('value', message);
+                
+                   
+                });
+
+
+           
+          
+            
+                
+          
+        </script>
+    </body>
+</html>
