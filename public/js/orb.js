@@ -34,7 +34,7 @@ AFRAME.registerComponent('menu-orb', {
         ExitMenu.setAttribute('go-to-zen-room',{});
         ExitMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/exit_OBJ.obj'});
         ExitMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/ExitTXT.png'} );
-        ExitMenu.setAttribute('position', {x:-0.05, y:3.7, z:-18.5});
+        ExitMenu.setAttribute('position', {x:-0.05, y:2.2, z:-18.5});
         ExitMenu.setAttribute('rotation', {x:0, y:0, z:0});
         ExitMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -47,14 +47,14 @@ AFRAME.registerComponent('menu-orb', {
         BackToMenu.setAttribute('go-to-menu-room',{});
         BackToMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/backToMenu_OBJ.obj'});
         BackToMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/BackToMenuRoomTXT.png'} );
-        BackToMenu.setAttribute('position', {x:-0.205, y:3.7, z:-18.5});
+        BackToMenu.setAttribute('position', {x:-0.205, y:2.2, z:-18.5});
         BackToMenu.setAttribute('rotation', {x:0, iy:0, z:0});
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
-        DuoTalkMenu.setAttribute('position', {x:-0.05, y:5, z:-18.5});
+        DuoTalkMenu.setAttribute('position', {x:-0.05, y:3.5, z:-18.5});
         DuoTalkMenu.setAttribute('rotation', {x:0, y:0, z:0});
         DuoTalkMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -62,7 +62,7 @@ AFRAME.registerComponent('menu-orb', {
         let meditateMenu = document.createElement('a-entity');
         meditateMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/meditate_OBJ.obj'});
         meditateMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/meditateTXT.png'} );
-        meditateMenu.setAttribute('position', {x:-0.205, y:5, z:-18.5});
+        meditateMenu.setAttribute('position', {x:-0.205, y:3.5, z:-18.5});
         meditateMenu.setAttribute('rotation', {x:0, y:0, z:0});
         meditateMenu.setAttribute('scale', {x:1, y:1, z:1});
 
@@ -127,7 +127,7 @@ AFRAME.registerComponent('mountain-orb', {
         ExitMenu.setAttribute('go-to-zen-room',{});
         ExitMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/exit_OBJ.obj'});
         ExitMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/ExitTXT.png'} );
-        ExitMenu.setAttribute('position', {x:-4.54, y:6.88, z:11.87});
+        ExitMenu.setAttribute('position', {x:-4.54, y:3.68, z:11.87});
         ExitMenu.setAttribute('rotation', {x:0, y:0, z:0});
         ExitMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -140,14 +140,14 @@ AFRAME.registerComponent('mountain-orb', {
         BackToMenu.setAttribute('go-to-menu-room',{});
         BackToMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/backToMenu_OBJ.obj'});
         BackToMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/BackToMenuRoomTXT.png'} );
-        BackToMenu.setAttribute('position', {x:-4.94, y:6.88, z:11.87});
+        BackToMenu.setAttribute('position', {x:-4.94, y:3.68, z:11.87});
         BackToMenu.setAttribute('rotation', {x:0, iy:0, z:0});
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
-        DuoTalkMenu.setAttribute('position', {x:-4.54, y:8.3, z:11.87});
+        DuoTalkMenu.setAttribute('position', {x:-4.54, y:5.1, z:11.87});
         DuoTalkMenu.setAttribute('rotation', {x:0, y:0, z:0});
         DuoTalkMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -157,7 +157,7 @@ AFRAME.registerComponent('mountain-orb', {
 
         meditateMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/meditate_OBJ.obj'});
         meditateMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/meditateTXT.png'} );
-        meditateMenu.setAttribute('position', {x:-4.94, y:8.3, z:11.87});
+        meditateMenu.setAttribute('position', {x:-4.94, y:5.1, z:11.87});
         meditateMenu.setAttribute('rotation', {x:0, y:0, z:0});
         meditateMenu.setAttribute('scale', {x:1, y:1, z:1});
 
@@ -219,7 +219,7 @@ AFRAME.registerComponent('euphoria-orb', {
         ExitMenu.setAttribute('go-to-zen-room',{});
         ExitMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/exit_OBJ.obj'});
         ExitMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/ExitTXT.png'} );
-        ExitMenu.setAttribute('position', {x:50.6, y:106.4, z:-43.3});
+        ExitMenu.setAttribute('position', {x:50.6, y:3, z:-43.3});
         ExitMenu.setAttribute('rotation', {x:0, y:180, z:0});
         ExitMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -232,14 +232,14 @@ AFRAME.registerComponent('euphoria-orb', {
         BackToMenu.setAttribute('go-to-menu-room',{});
         BackToMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/backToMenu_OBJ.obj'});
         BackToMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/BackToMenuRoomTXT.png'} );
-        BackToMenu.setAttribute('position', {x:50.75, y:106.4, z:-43.3});
+        BackToMenu.setAttribute('position', {x:50.75, y:3, z:-43.3});
         BackToMenu.setAttribute('rotation', {x:0, y:180, z:0});
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
-        DuoTalkMenu.setAttribute('position', {x:50.6, y:107.7, z:-43.3});
+        DuoTalkMenu.setAttribute('position', {x:50.6, y:4.3, z:-43.3});
         DuoTalkMenu.setAttribute('rotation', {x:0, y:180, z:0});
         DuoTalkMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -249,7 +249,7 @@ AFRAME.registerComponent('euphoria-orb', {
 
         meditateMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/meditate_OBJ.obj'});
         meditateMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/meditateTXT.png'} );
-        meditateMenu.setAttribute('position', {x:50.75, y:107.7, z:-43.3});
+        meditateMenu.setAttribute('position', {x:50.75, y:4.3, z:-43.3});
         meditateMenu.setAttribute('rotation', {x:0, y:180, z:0});
         meditateMenu.setAttribute('scale', {x:1, y:1, z:1});
 
@@ -307,7 +307,7 @@ AFRAME.registerComponent('solace-orb', {
         ExitMenu.setAttribute('go-to-zen-room',{});
         ExitMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/exit_OBJ.obj'});
         ExitMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/ExitTXT.png'} );
-        ExitMenu.setAttribute('position', {x:-4.60, y:13.2, z:11.87});
+        ExitMenu.setAttribute('position', {x:-4.60, y:-2.3, z:11.87});
         ExitMenu.setAttribute('rotation', {x:0, y:0, z:0});
         ExitMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -320,14 +320,14 @@ AFRAME.registerComponent('solace-orb', {
         BackToMenu.setAttribute('go-to-menu-room',{});
         BackToMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/backToMenu_OBJ.obj'});
         BackToMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/BackToMenuRoomTXT.png'} );
-        BackToMenu.setAttribute('position', {x:-4.79, y:13.2, z:11.87});
+        BackToMenu.setAttribute('position', {x:-4.79, y:-2.3, z:11.87});
         BackToMenu.setAttribute('rotation', {x:0, y:0, z:0});
         BackToMenu.setAttribute('scale', {x:1, y:1, z:1});
 
         let DuoTalkMenu = document.createElement('a-entity');
         DuoTalkMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/duoTalk_OBJ.obj'});
         DuoTalkMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/duoTalkTXT.png'} );
-        DuoTalkMenu.setAttribute('position', {x:-4.60, y:14.5, z:11.87});
+        DuoTalkMenu.setAttribute('position', {x:-4.60, y:-1, z:11.87});
         DuoTalkMenu.setAttribute('rotation', {x:0, y:0, z:0});
         DuoTalkMenu.setAttribute('scale', {x:1, y:1, z:1});
         
@@ -338,7 +338,7 @@ AFRAME.registerComponent('solace-orb', {
 
         meditateMenu.setAttribute('obj-model', {obj:'/assets/OrbMenu/meditate_OBJ.obj'});
         meditateMenu.setAttribute('material', {src:'/assets/Textures/OrbMenu/meditateTXT.png'} );
-        meditateMenu.setAttribute('position', {x:-4.79, y:14.5, z:11.87});
+        meditateMenu.setAttribute('position', {x:-4.79, y:-1, z:11.87});
         meditateMenu.setAttribute('rotation', {x:0, y:0, z:0});
         meditateMenu.setAttribute('scale', {x:1, y:1, z:1});
 
@@ -363,3 +363,23 @@ AFRAME.registerComponent('solace-orb', {
     //     let scene = document.querySelector('#PeaceRoom');
     // }
 });
+
+AFRAME.registerComponent('collider-check', {
+    dependencies: ['raycaster'],
+  
+    init: function () {
+      this.el.addEventListener('raycaster-intersection', function () {
+        console.log('Player hit something!');
+      });
+    }
+  });
+
+  AFRAME.registerComponent('collider-check', {
+    dependencies: ['raycaster'],
+  
+    init: function () {
+      this.el.addEventListener('raycaster-intersection', function () {
+        console.log('Player hit something!');
+      });
+    }
+  });

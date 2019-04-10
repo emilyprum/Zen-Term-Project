@@ -10,7 +10,7 @@
         <script src="/js/aframe-particle-system-component.min.js"></script>
         <script src= "/js/glow.js"></script>
         <script src = "/js/orb.js"></script>
-        <script src = "/js/sound-clicking.js"></script>
+        
 
 
 
@@ -55,9 +55,10 @@
 
 
                 </a-assets>
- 
+                <a-entity id="leftHand" hand-controls="left"></a-entity>
+                <a-entity id="rightHand" hand-controls="right"></a-entity>
                 <!--camera stuff-->
-                <a-entity position="-35 4.8 106  "camera look-controls wasd-controls >
+                <a-entity position="-35 1.6 106  "camera look-controls wasd-controls >
                     <a-entity  
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
@@ -67,6 +68,9 @@
                    </a-entity>
 
                </a-entity>
+
+
+               <a-entity position="0 -3.2 0">
                
                     <!--lights-->
                 <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
@@ -75,7 +79,7 @@
                     <!--stuff loading-->
 
 
-                
+                   
 
 
 
@@ -180,7 +184,7 @@
                 <a-entity id="cloud8OBJ" obj-model="obj:#cloud4;" rotation = "0 -149 180" position="123 133 -60" scale="5 3 4" material="color:#fff; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                 <a-entity id = "snow" particle-system="preset: snow; particleCount: 600; size: 3;" scale="0.5 0.7 1" position= "102 78 -71" rotation- "0 0 -18"></a-entity>
 
-
+            </a-entity>
 
                     <!--sky-->
                     <a-entity id="sky" 

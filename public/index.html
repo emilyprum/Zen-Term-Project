@@ -9,7 +9,7 @@
         <script src= "/js/switch-environment.js"></script>
         <script src= "/js/glow.js"></script>
         <script src = "/js/orb.js"></script>
-        <script src = "/js/sound-clicking.js"></script>
+      
         
 
 
@@ -64,9 +64,11 @@
 
 
                 </a-assets>
-
+                <a-entity id= "leftHand"laser-controls="hand: left" line="color: red; opacity: 0.75" collider-check></a-entity>
+                <a-entity id="rightHand" laser-controls="hand: right" line="color: red; opacity: 0.75" collider-check></a-entity>
+                <a-entity raycaster="objects: .clickable" cursor></a-entity>
                 <!--camera stuff-->
-                <a-entity position="0 3 -2 "camera look-controls wasd-controls>
+                <a-entity position="9.4 1.6 -2.7 "camera look-controls wasd-controls>
                      <a-entity  
                      cursor="fuse:true; fuseTimeout:500;"
                      rayOrigin:mouse;
@@ -76,13 +78,13 @@
                     </a-entity>
 
                 </a-entity>
-
+<a-entity position = "0 -1.5">
                     <!--lights-->
                     <a-entity light="type:directional; castShadow:true; intensity:0.3; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024; color:#F5D0A0" position="-23 28 -50"></a-entity>
                     <a-entity light="type:ambient; intensity:0.7; color:#F5D0A0;"></a-entity>
 
                     <!--stuff loading-->
-
+                    
                     <!--Trees-->
                     
                   <!--   <a-entity id="treeFenceOBJ" obj-model="#treeFence" material="color:#ffbf66; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" position="25 0 5" scale="0.6 0.6 0.6" shadow="cast:true; receive:true;" "></a-entity>
@@ -132,7 +134,6 @@
                     <a-entity id="gate" obj-model="obj:#entGatePR;" position="-16 0 -12" rotation = "0 65 0" scale="1.0 1.0 1.0" material="color:#CA9B54; sphericalEnvMap:#skymapPR; roughness:0.7; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="plane" obj-model="obj:#planePR;" position="0 -1.5 4.5" scale="1.0 1.0 1.0" material="color:#AFE1A8; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;"  sound="src: #zenRoomSound; autoplay:true; loop:true;"shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="temple" obj-model="obj:#templePR;" position="0 0 -25" scale="1.0 1.0 1.0" material="color:#fff; src:#templeTXT; sphericalEnvMap:#skymapPR; roughness:0.9; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
-                 <!--   <a-entity id="pond" obj-model="obj:#pond;" position="-0.220 -0.61 4" rotation = "0.08 -22 -0.5" scale="1.516 1.0 1.691" material="color:#A3D5DF transparent: true; opacity: 0.8; sphericalEnvMap:#skymapPR; roughness:0.3; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>-->
                     <a-entity id="bridge" obj-model="obj:#bridge;" position="3.3 -0.2 8" rotation = "0 8 0" scale="2.8 2.9 4.1" material="color:#D5C09A; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="rockPath1" obj-model="obj:#rockPath1;" position="-13 -0.22 -12.5" rotation = "0 -129 0" scale="1.9 1 2.9" material="color:#C1C7C0; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
                     <a-entity id="decor" obj-model="obj:#decor;" position="-14 0 -7.5" rotation = "0 139 0" scale="1 1 1" material="color:#f4edd9; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.2;" shadow="cast:true; receive:true;"></a-entity>
@@ -158,6 +159,7 @@
                   
                         >
                     </a-ocean>
+                </a-entity>
              
                     <!--<a-entity id="plane" geometry="primitive:plane; width:50; height:40;" position="0 0 -4" rotation="-90 0 0" 
                     shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymapPR; roughness:0.5; metalness:0.0;"></a-entity> -->

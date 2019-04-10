@@ -10,7 +10,7 @@
         <script src="/js/aframe-particle-system-component.min.js"></script>
         <script src= "/js/glow.js"></script>
         <script src = "/js/orb.js"></script>
-        <script src = "/js/sound-clicking.js"></script>
+      
 
 
 
@@ -58,9 +58,11 @@
 
 
                 </a-assets>
- 
+                <a-entity id="leftHand" hand-controls="left"></a-entity>
+                <a-entity id="rightHand" hand-controls="right"></a-entity>
+
                 <!--camera stuff-->
-                <a-entity position="49 105 -55  "camera look-controls wasd-controls>
+                <a-entity position="49 1.6 -55  "camera look-controls wasd-controls>
                     <a-entity  
                     cursor="fuse:true; fuseTimeout:500;"
                     rayOrigin:mouse;
@@ -71,12 +73,13 @@
 
                </a-entity>
                
+               <a-entity position= "0 -103.4 0">
                     <!--lights-->
                 <a-entity light="type:directional; castShadow:true; intensity:0.2; shadowBias:-0.00001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-23 28 -50"></a-entity>
                 <a-entity light="type:ambient; intensity:0.7; color:#adbcd3;"></a-entity>
 
                     <!--stuff loading-->
-
+                   
         <!--Environment-->
 
         <a-entity id="hotAir" obj-model="obj:#hotAirBalloonOBJ;" position="-36.548 98.396 -1.6" scale="1 1 1" material="color:#fff; src: #hotAirBalloonTXT; sphericalEnvMap:#skymapPR; roughness:0.8; metalness:0.2;" shadow="cast:true; receive:true;">
@@ -226,7 +229,7 @@
                          </a-animation>  
                  </a-sphere>
                
-            
+                </a-entity>
 
 
                     <!--sky-->
